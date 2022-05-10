@@ -1,4 +1,4 @@
-# todo list local storage
+# 📝 todo list local storage
 
 Web tarayıcınızın local storage'ını kullanan pratik todo list. Masaüstü açılış sayfası yapıp gün içerisindeki hızlı notları almak için ideal.
 
