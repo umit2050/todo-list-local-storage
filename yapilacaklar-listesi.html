@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="yl.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+    <title>Yapılacaklar Listesi</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="ekleme">
+            
+                <div class="todo-giris">
+                    <form name="todo-form" id="todo-form" method="GET">
+                        <input type="text" name="todo-item" id="todo-item" maxlength="200" value="">
+                    </form>
+                </div>
+            
+            <div class="butonlar">
+                <div class="buton-ekle"><button id="ekle" type="submit">✔️<span class="span-ekle"> Ekle</span></button></div>
+                <div class="buton-temizle"><button id="temizle">🗑️<span class="span-temizle"> Listeyi temizle</span></button></div>
+            </div>
+        
+        </div>
+
+        <div id="uyari" class="uyari">
+            <p>Tüm listeyi silmek istediğinize emin misiniz?</p>
+            <button id='onayButon' onclick='uyari()'>Sil</button>
+            <button id='iptalButon'>Vazgeç</button>
+        </div>
+
+        <div id="liste" class="liste">
+
+        </div>
+
+    </div>
+
+    <script src="yl.js"></script>
+
+</body>
+</html>

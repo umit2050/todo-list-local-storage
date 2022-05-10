@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+}
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.ekleme {
+    height: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.liste {
+ width: 100%;
+}
+.madde {
+    width: 100%;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0;
+    margin-bottom: 2px;
+}
+.maddeIcerik {
+    flex: auto;
+    align-self: center;
+    margin-left: 10px;
+}
+.silDiv {
+    width: 30px;
+    border: 0;
+    font-size: 1em;
+    margin: 0 auto;
+    padding: 0;
+    opacity: 0.7;
+}
+table {
+    width: 100%;
+}
+td {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px;
+}
+td:first-child {
+    width: auto;
+    padding-left: 7px;
+}
+td:last-child {
+    width: 30px;
+    margin: 0;
+    border: 0;
+}
+.todo-giris {
+    display: flex;
+    flex: auto;
+}
+
+form {
+    width: 100%;
+}
+input{
+    font-family: "Quicksand";
+    padding: 0.5em;
+    background-color: #ffffff;
+    color: rgb(68, 68, 68);
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    width: 100%;
+}
+.butonlar {
+    display: flex;
+    justify-content: space-around;
+    width: 340px;
+}
+button{
+    font-family: "Quicksand";
+    font-size: 1em;
+    height: 2.5em;
+    width: 160px;
+    margin-left: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+}
+.sil {
+    background-color:rgba(0, 0, 0, 0);
+    width: 30px;
+    border: 0;
+    font-size: 1em;
+    margin: 0 auto;
+    padding: 4px;
+    opacity: 0.7;
+}
+.sil:hover {
+    opacity: 1;
+}
+.uyari {
+    width: 80%;
+    display: none;
+}
+/* Responsive */
+@media (max-width: 1100px) {
+    .wrapper {
+        width: 100%;
+    }
+    .ekleme {
+        height: 60px;
+    }
+    .span-ekle, .span-temizle {
+        display: none;
+    }
+    .butonlar {
+        display: flex;
+        justify-content: space-around;
+        width: auto;
+    }
+    button {
+        width: 40px;
+    }
+
+}
+@media (max-width: 800px) {
+    .wrapper {
+        width: 100%;
+    }
+    .ekleme {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .todo-giris {
+        width: 100%;
+    }
+    input {
+        margin-bottom: 10px;
+    }
+    .butonlar {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+        margin-left: 0;
+    }
+    .buton-ekle {
+        width: 90%;
+    }
+    .buton-temizle {
+        width: 10%;
+        margin-left: 10px;
+    }
+    .span-ekle {
+        display: inline;
+    }
+}
