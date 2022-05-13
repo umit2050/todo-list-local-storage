@@ -16,7 +16,7 @@ todoEkle.onclick = function() {
 
     // div'lerin içeriğini oluşturuyoruz
     maddeIcerik.textContent = todoItem.value; // textbox'tan değeri okuyup aktarıyoruz
-    silDiv.innerHTML = "<button value='🗑️' id='sil' onclick='sil(this)' onmouseover='silOver()' onmouseout='silOut()' class='sil'>🗑️</button>" // sil butonunu oluşturuyoruz
+    silDiv.innerHTML = "<button value='🗑️' id='sil' onclick='sil(this)' class='sil'>🗑️</button>" // sil butonunu oluşturuyoruz
 
     // div'leri liste öğesine ekliyoruz
     liste.appendChild(madde); // liste maddesi
