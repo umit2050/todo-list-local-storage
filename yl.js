@@ -46,7 +46,7 @@ if (itemsArray.length != 0) {
 
     // div'lerin içeriğini oluşturuyoruz
     maddeIcerik.textContent = itemsArray[s]; // Bu sefer localStorage'dan okuyup aktarıyoruz
-    silDiv.innerHTML = "<button value='🗑️' id='sil' onclick='sil(this)' onmouseover='silOver()' onmouseout='silOut()' class='sil'>🗑️</button>"; // sil butonu
+    silDiv.innerHTML = "<button value='🗑️' id='sil' onclick='sil(this)' class='sil'>🗑️</button>"; // sil butonu
 
     // div'leri liste öğesine ekliyoruz
     liste.appendChild(madde);
