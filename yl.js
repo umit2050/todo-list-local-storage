@@ -77,6 +77,14 @@ function sil(r) {
     localStorage.setItem("yapilacaklar", JSON.stringify(itemsArray));
 }
 
+// Enter'a basıldığında liste öğesinin eklenmesini sağlıyoruz
+document.onkeydown = function(e){
+    let key = e.key;
+    if(key == "Enter"){
+        todoEkle.click();
+    }
+}
+
 // Deneysel bölüm //
 
 // Silme butonu üzerine gelince yapılacaklardaki aktif satırın rengini değiştiriyoruz
