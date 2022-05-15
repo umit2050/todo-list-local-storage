@@ -98,7 +98,10 @@ new Sortable(dragArea, {
     // Seçili öğe bırakıldıktan sonra arkaplan rengi sıfırlanıyor
     onUnchoose: function (evt) {
         let item = evt.item;
-        item.style = "background-color: #fff";
+        setTimeout(function () {
+            item.style = "background-color: #fff";
+            item.style.transition = "background-color 0.2s";
+        }, 350);
     },
     // Sıralama işlemi bittikten sonra öğelerin yeni sırasını localStorage'a kaydediyoruz
     onEnd: function (evt) {
