@@ -81,13 +81,26 @@ function sil(r) {
 document.onkeydown = function(e){
     let key = e.key;
     if(key == "Enter"){
-        todoEkle.click();
+        if (todoItem.value != "") {
+            todoEkle.click();
+        }
     }
 }
 // Sortable özelliği (SortableJS)
 const dragArea = document.querySelector(".liste");
 new Sortable(dragArea, {
     animation: 350,
+    // Seçili öğenin arka plan rengini değiştiriyoruz
+    onChoose: function (evt) {
+        let item = evt.item;
+        item.style = "background-color: #ECFFB7";
+    },
+    // Seçili öğe bırakıldıktan sonra arkaplan rengi sıfırlanıyor
+    onUnchoose: function (evt) {
+        let item = evt.item;
+        item.style = "background-color: #fff";
+    },
+    // Sıralama işlemi bittikten sonra öğelerin yeni sırasını localStorage'a kaydediyoruz
     onEnd: function (evt) {
         let item = evt.item;
         let parent = item.parentNode;
