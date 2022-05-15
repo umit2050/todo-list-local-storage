@@ -91,6 +91,7 @@ button{
     margin-left: 0.5em;
     border: 1px solid #ccc;
     border-radius: 0.5em;
+    cursor: pointer;
 }
 .sil {
     background-color:rgba(0, 0, 0, 0);

@@ -84,13 +84,16 @@ document.onkeydown = function(e){
         todoEkle.click();
     }
 }
-
-// Deneysel bölüm //
-
-// Silme butonu üzerine gelince yapılacaklardaki aktif satırın rengini değiştiriyoruz
-// function silOver() {
-//     document.querySelector("#liste div").style.backgroundColor = "#fdffcd";
-// }
-// function silOut() {
-//     document.querySelector("#liste div").style.backgroundColor = "white";
-// }
+// Sortable özelliği (SortableJS)
+const dragArea = document.querySelector(".liste");
+new Sortable(dragArea, {
+    animation: 350,
+    onEnd: function (evt) {
+        let item = evt.item;
+        let parent = item.parentNode;
+        let newOrder = Array.prototype.indexOf.call(parent.children, item);
+        let oldOrder = itemsArray.indexOf(item.childNodes[0].textContent);
+        itemsArray.splice(newOrder, 0, itemsArray.splice(oldOrder, 1)[0]);
+        localStorage.setItem("yapilacaklar", JSON.stringify(itemsArray));
+    }
+});
